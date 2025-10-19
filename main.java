@@ -1,1 +1,3 @@
-class ClassName
+class ClassName {
+
+  public void mai()
