@@ -10,5 +10,6 @@ public class Main
 		String value = AtomicEncryptor.encrypt(text, key);
 		
 		System.out.println(value);
+
 	}
 }
