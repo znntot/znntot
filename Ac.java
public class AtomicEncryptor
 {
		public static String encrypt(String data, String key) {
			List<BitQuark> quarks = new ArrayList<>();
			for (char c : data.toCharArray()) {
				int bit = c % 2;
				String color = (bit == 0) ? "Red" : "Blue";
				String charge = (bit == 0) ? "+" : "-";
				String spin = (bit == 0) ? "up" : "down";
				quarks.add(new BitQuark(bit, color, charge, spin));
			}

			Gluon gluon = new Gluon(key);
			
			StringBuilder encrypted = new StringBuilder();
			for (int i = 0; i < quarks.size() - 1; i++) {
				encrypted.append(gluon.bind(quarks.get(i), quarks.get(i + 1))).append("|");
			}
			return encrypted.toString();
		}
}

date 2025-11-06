@@ -1,0 +1,23 @@
+import java.util.*;
+
+public class AtomicEncryptor
+ {
+		public static String encrypt(String data, String key) {
+			List<BitQuark> quarks = new ArrayList<>();
+			for (char c : data.toCharArray()) {
+				int bit = c % 2;
+				String color = (bit == 0) ? "Red" : "Blue";
+				String charge = (bit == 0) ? "+" : "-";
+				String spin = (bit == 0) ? "up" : "down";
+				quarks.add(new BitQuark(bit, color, charge, spin));
+			}
+
+			Gluon gluon = new Gluon(key);
+			
+			StringBuilder encrypted = new StringBuilder();
+			for (int i = 0; i < quarks.size() - 1; i++) {
+				encrypted.append(gluon.bind(quarks.get(i), quarks.get(i + 1))).append("|");
+			}
+			return encrypted.toString();
+		}
+}
