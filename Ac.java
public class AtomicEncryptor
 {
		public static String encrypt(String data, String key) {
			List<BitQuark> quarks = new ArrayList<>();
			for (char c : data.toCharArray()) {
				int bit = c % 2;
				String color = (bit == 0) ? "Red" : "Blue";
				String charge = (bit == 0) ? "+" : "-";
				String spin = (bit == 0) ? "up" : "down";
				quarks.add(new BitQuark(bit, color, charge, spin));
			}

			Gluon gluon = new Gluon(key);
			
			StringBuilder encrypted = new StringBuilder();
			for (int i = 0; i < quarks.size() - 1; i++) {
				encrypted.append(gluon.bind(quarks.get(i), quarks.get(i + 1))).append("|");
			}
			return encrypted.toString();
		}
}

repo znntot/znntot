@@ -3,6 +3,7 @@ import java.util.*;
 public class AtomicEncryptor
  {
 		public static String encrypt(String data, String key) {
+
 			List<BitQuark> quarks = new ArrayList<>();
 			for (char c : data.toCharArray()) {
 				int bit = c % 2;
@@ -10,6 +11,7 @@ public class AtomicEncryptor
 				String charge = (bit == 0) ? "+" : "-";
 				String spin = (bit == 0) ? "up" : "down";
 				quarks.add(new BitQuark(bit, color, charge, spin));
+
 			}
 
 			Gluon gluon = new Gluon(key);
