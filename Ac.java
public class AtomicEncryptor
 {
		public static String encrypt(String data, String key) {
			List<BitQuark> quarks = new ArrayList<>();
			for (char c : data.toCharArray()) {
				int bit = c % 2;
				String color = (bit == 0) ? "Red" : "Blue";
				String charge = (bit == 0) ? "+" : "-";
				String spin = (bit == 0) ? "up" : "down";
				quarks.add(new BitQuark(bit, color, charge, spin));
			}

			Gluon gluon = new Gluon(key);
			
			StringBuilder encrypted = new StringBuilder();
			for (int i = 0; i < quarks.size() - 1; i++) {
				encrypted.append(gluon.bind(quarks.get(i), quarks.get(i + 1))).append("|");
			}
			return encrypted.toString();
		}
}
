@@ -21,5 +21,6 @@ public class AtomicEncryptor
 				encrypted.append(gluon.bind(quarks.get(i), quarks.get(i + 1))).append("|");
 			}
 			return encrypted.toString();
+
 		}
 }
