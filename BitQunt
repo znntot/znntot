@@ -6,9 +6,11 @@ public class BitQuark {
 		private String spin; // up, down
 
 		public BitQuark(int bit, String color, String charge, String spin) {
+
 			this.bit = bit;
 			this.color = color;
 			this.charge = charge;
 			this.spin = spin;
+
 		}
 	}
